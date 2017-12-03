@@ -29,7 +29,7 @@ cache: pip
 branches:
   only:
   - master
-  - 1.*
+  - /^1\..*/
  
 install:
   - pip install -U pip setuptools wheel
