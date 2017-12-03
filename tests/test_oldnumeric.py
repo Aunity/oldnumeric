@@ -2,14 +2,16 @@ from __future__ import division, absolute_import, print_function
 
 import unittest
 
-from numpy.testing import *
-
 from numpy import array
-from numpy.oldnumeric import *
 from numpy.core.numeric import float32, float64, complex64, complex128, int8, \
         int16, int32, int64, uint, uint8, uint16, uint32, uint64
+from oldnumeric import *
 
-class test_oldtypes(unittest.TestCase):
+def assert_array_equal(a1, a2):
+    assert (a1 == a2).all()
+
+
+class TestOldTypes(unittest.TestCase):
     def test_oldtypes(self, level=1):
         a1 = array([0, 1, 0], Float)
         a2 = array([0, 1, 0], float)
