@@ -138,22 +138,22 @@ def fromstr(filestr):
     savestr = filestr[:]
     filestr = fixtypechars(filestr)
     filestr = fixistesting(filestr)
-    filestr, fromall1 = changeimports(filestr, 'Numeric', 'numpy.oldnumeric')
-    filestr, fromall1 = changeimports(filestr, 'multiarray', 'numpy.oldnumeric')
-    filestr, fromall1 = changeimports(filestr, 'umath', 'numpy.oldnumeric')
-    filestr, fromall1 = changeimports(filestr, 'Precision', 'numpy.oldnumeric.precision')
-    filestr, fromall1 = changeimports(filestr, 'UserArray', 'numpy.oldnumeric.user_array')
-    filestr, fromall1 = changeimports(filestr, 'ArrayPrinter', 'numpy.oldnumeric.array_printer')
-    filestr, fromall2 = changeimports(filestr, 'numerix', 'numpy.oldnumeric')
-    filestr, fromall3 = changeimports(filestr, 'scipy_base', 'numpy.oldnumeric')
-    filestr, fromall3 = changeimports(filestr, 'Matrix', 'numpy.oldnumeric.matrix')
-    filestr, fromall3 = changeimports(filestr, 'MLab', 'numpy.oldnumeric.mlab')
-    filestr, fromall3 = changeimports(filestr, 'LinearAlgebra', 'numpy.oldnumeric.linear_algebra')
-    filestr, fromall3 = changeimports(filestr, 'RNG', 'numpy.oldnumeric.rng')
-    filestr, fromall3 = changeimports(filestr, 'RNG.Statistics', 'numpy.oldnumeric.rng_stats')
-    filestr, fromall3 = changeimports(filestr, 'RandomArray', 'numpy.oldnumeric.random_array')
-    filestr, fromall3 = changeimports(filestr, 'FFT', 'numpy.oldnumeric.fft')
-    filestr, fromall3 = changeimports(filestr, 'MA', 'numpy.oldnumeric.ma')
+    filestr, fromall1 = changeimports(filestr, 'Numeric', 'oldnumeric')
+    filestr, fromall1 = changeimports(filestr, 'multiarray', 'oldnumeric')
+    filestr, fromall1 = changeimports(filestr, 'umath', 'oldnumeric')
+    filestr, fromall1 = changeimports(filestr, 'Precision', 'oldnumeric.precision')
+    filestr, fromall1 = changeimports(filestr, 'UserArray', 'oldnumeric.user_array')
+    filestr, fromall1 = changeimports(filestr, 'ArrayPrinter', 'oldnumeric.array_printer')
+    filestr, fromall2 = changeimports(filestr, 'numerix', 'oldnumeric')
+    filestr, fromall3 = changeimports(filestr, 'scipy_base', 'oldnumeric')
+    filestr, fromall3 = changeimports(filestr, 'Matrix', 'oldnumeric.matrix')
+    filestr, fromall3 = changeimports(filestr, 'MLab', 'oldnumeric.mlab')
+    filestr, fromall3 = changeimports(filestr, 'LinearAlgebra', 'oldnumeric.linear_algebra')
+    filestr, fromall3 = changeimports(filestr, 'RNG', 'oldnumeric.rng')
+    filestr, fromall3 = changeimports(filestr, 'RNG.Statistics', 'oldnumeric.rng_stats')
+    filestr, fromall3 = changeimports(filestr, 'RandomArray', 'oldnumeric.random_array')
+    filestr, fromall3 = changeimports(filestr, 'FFT', 'oldnumeric.fft')
+    filestr, fromall3 = changeimports(filestr, 'MA', 'oldnumeric.ma')
     fromall = fromall1 or fromall2 or fromall3
     filestr = replaceattr(filestr)
     filestr = replaceother(filestr)
@@ -161,7 +161,7 @@ def fromstr(filestr):
         today = datetime.date.today().strftime('%b %d, %Y')
         name = os.path.split(sys.argv[0])[-1]
         filestr = '## Automatically adapted for '\
-                  'numpy.oldnumeric %s by %s\n\n%s' % (today, name, filestr)
+                  'oldnumeric %s by %s\n\n%s' % (today, name, filestr)
         return filestr, 1
     return filestr, 0
 
@@ -193,7 +193,7 @@ def fromargs(args):
     converttree(filename)
 
 def convertall(direc=os.path.curdir, orig=1):
-    """Convert all .py files to use numpy.oldnumeric (from Numeric) in the directory given
+    """Convert all .py files to use oldnumeric (from Numeric) in the directory given
 
     For each changed file, a backup of <usesnumeric>.py is made as
     <usesnumeric>.py.orig.  A new file named <usesnumeric>.py

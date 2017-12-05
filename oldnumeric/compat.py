@@ -73,7 +73,7 @@ def pickle_array(a):
                 (a.shape, a.dtype.char, a.tostring(), LittleEndian))
 
 def loads(astr):
-    arr = pickle.loads(astr.replace('Numeric', 'numpy.oldnumeric'))
+    arr = pickle.loads(astr.replace('Numeric', 'oldnumeric'))
     return arr
 
 def load(fp):
@@ -105,7 +105,7 @@ if sys.version_info[0] >= 3:
         #      to do.
         def __init__(self, *a, **kw):
             raise NotImplementedError(
-                "numpy.oldnumeric.Unpickler is not supported on Python 3")
+                "oldnumeric.Unpickler is not supported on Python 3")
 else:
     class Unpickler(pickle.Unpickler):
         def load_array(self):

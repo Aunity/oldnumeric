@@ -7,9 +7,9 @@ __all__ = ['UserArray', 'squeeze', 'Matrix', 'asarray', 'dot', 'k', 'Numeric', '
 
 import types
 from .user_array import UserArray, asarray
-import numpy.oldnumeric as Numeric
-from numpy.oldnumeric import dot, identity, multiply
-import numpy.oldnumeric.linear_algebra as LinearAlgebra
+import oldnumeric as Numeric
+from oldnumeric import dot, identity, multiply
+import oldnumeric.linear_algebra as LinearAlgebra
 from numpy import matrix as Matrix, squeeze
 
 # Hidden names that will be the same.

@@ -2,7 +2,7 @@ from __future__ import division, absolute_import, print_function
 
 __all__ = ['average', 'histogram', 'standardDeviation', 'variance']
 
-import numpy.oldnumeric as Numeric
+import oldnumeric as Numeric
 
 def average(data):
     data = Numeric.array(data)
