@@ -10,7 +10,6 @@ class TestRegression(unittest.TestCase):
         from oldnumeric.random_array import randint
         randint(0, 50, [2, 3])
 
-    @pytest.mark.xfail
     def test_mlab_import(self):
         """gh-3803"""
         try:

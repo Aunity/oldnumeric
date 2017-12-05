@@ -1,6 +1,6 @@
 """Re-create the RNG interface from Numeric.
 
-Replace import RNG with import numpy.oldnumeric.rng as RNG.
+Replace import RNG with import oldnumeric.rng as RNG.
 It is for backwards compatibility only.
 
 """

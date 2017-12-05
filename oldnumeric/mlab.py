@@ -9,8 +9,8 @@ __all__ = ['rand', 'tril', 'trapz', 'hanning', 'rot90', 'triu', 'diff', 'angle',
            'max', 'blackman', 'corrcoef', 'bartlett', 'eye', 'squeeze', 'sinc',
            'tri', 'cov', 'svd', 'min', 'median', 'fliplr', 'eig', 'mean']
 
-import numpy.oldnumeric.linear_algebra as LinearAlgebra
-import numpy.oldnumeric.random_array as RandomArray
+import oldnumeric.linear_algebra as LinearAlgebra
+import oldnumeric.random_array as RandomArray
 from numpy import tril, trapz as _Ntrapz, hanning, rot90, triu, diff, \
      angle, roots, ptp as _Nptp, kaiser, cumprod as _Ncumprod, \
      diag, msort, prod as _Nprod, std as _Nstd, hamming, flipud, \

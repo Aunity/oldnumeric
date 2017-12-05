@@ -121,14 +121,14 @@ def _add_axis(fstr, name, repl):
 def _import_change(fstr, names):
     # Four possibilities
     #  1.) import numpy with subsequent use of numpy.<name>
-    #        change this to import numpy.oldnumeric as numpy
+    #        change this to import oldnumeric as numpy
     #  2.) import numpy as XXXX with subsequent use of
-    #        XXXX.<name> ==> import numpy.oldnumeric as XXXX
+    #        XXXX.<name> ==> import oldnumeric as XXXX
     #  3.) from numpy import *
     #        with subsequent use of one of the names
     #  4.) from numpy import ..., <name>, ... (could span multiple
     #        lines.  ==> remove all names from list and
-    #        add from numpy.oldnumeric import <name>
+    #        add from oldnumeric import <name>
 
     num = 0
     # case 1
@@ -142,7 +142,7 @@ def _import_change(fstr, names):
                 found = 1
                 break
         if found:
-            fstr = "%s%s%s" % (fstr[:ind], "import numpy.oldnumeric as numpy",
+            fstr = "%s%s%s" % (fstr[:ind], "import oldnumeric as numpy",
                                fstr[ind+len(importstr):])
             num += 1
 
@@ -161,7 +161,7 @@ def _import_change(fstr, names):
                 importstr = "import numpy as %s" % module
                 ind = fstr.find(importstr)
                 fstr = "%s%s%s" % (fstr[:ind],
-                                   "import numpy.oldnumeric as %s" % module,
+                                   "import oldnumeric as %s" % module,
                                    fstr[ind+len(importstr):])
                 num += 1
 
@@ -177,7 +177,7 @@ def _import_change(fstr, names):
                 break
         if found:
             fstr = "%s%s%s" % (fstr[:ind],
-                               "from numpy.oldnumeric import *",
+                               "from oldnumeric import *",
                                fstr[ind+len(importstr):])
             num += 1
 
@@ -214,7 +214,7 @@ def _import_change(fstr, names):
                    (fstr[:ind],
                     "from numpy import %s" % \
                     ", ".join(importnames),
-                    "from numpy.oldnumeric import %s" % \
+                    "from oldnumeric import %s" % \
                     ", ".join(addnames),
                     fstr[ptr:])
             num += 1

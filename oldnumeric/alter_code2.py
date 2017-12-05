@@ -1,5 +1,5 @@
 """
-This module converts code written for numpy.oldnumeric to work
+This module converts code written for oldnumeric to work
 with numpy
 
 FIXME:  Flesh this out.
@@ -25,7 +25,7 @@ from __future__ import division, absolute_import, print_function
 __all__ = []
 
 import warnings
-warnings.warn("numpy.oldnumeric.alter_code2 is not working yet.")
+warnings.warn("oldnumeric.alter_code2 is not working yet.")
 
 import sys
 import os
@@ -78,7 +78,7 @@ def replaceother(astr):
 import datetime
 def fromstr(filestr):
     #filestr = replacetypechars(filestr)
-    filestr, fromall1 = changeimports(filestr, 'numpy.oldnumeric', 'numpy')
+    filestr, fromall1 = changeimports(filestr, 'oldnumeric', 'numpy')
     filestr, fromall1 = changeimports(filestr, 'numpy.core.multiarray', 'numpy')
     filestr, fromall1 = changeimports(filestr, 'numpy.core.umath', 'numpy')
     filestr, fromall3 = changeimports(filestr, 'LinearAlgebra',
