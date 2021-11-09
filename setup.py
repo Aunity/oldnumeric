@@ -9,7 +9,7 @@ setup(name='oldnumeric',
             'numpy',
       ],
       setup_requires=[
-            'setuptools_scm',
+            'setuptools',
       ],
-      use_scm_version=True,
+      #use_scm_version=True,
      )
