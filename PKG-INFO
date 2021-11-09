@@ -1,10 +1,10 @@
 Metadata-Version: 1.0
 Name: oldnumeric
-Version: 1.0.4
+Version: 1.0.5
 Summary: The oldnumeric numpy package
 Home-page: UNKNOWN
-Author: xoviat
-Author-email: xoviat@noreply.users.github.com
+Author: xoviat, MaohuaYang
+Author-email: xoviat@noreply.users.github.com, maohuay@hotmail.com
 License: UNKNOWN
 Description-Content-Type: UNKNOWN
 Description: UNKNOWN

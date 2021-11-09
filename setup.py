@@ -11,5 +11,6 @@ setup(name='oldnumeric',
       setup_requires=[
             'setuptools',
       ],
+      version='1.0.5',
       #use_scm_version=True,
      )
