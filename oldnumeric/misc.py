@@ -26,7 +26,7 @@ else:
     import copy_reg
     from StringIO import StringIO
 
-from numpy import sort, clip, rank, sign, shape, putmask, allclose, size,\
+from numpy import sort, clip, sign, shape, putmask, allclose, size,\
      choose, swapaxes, array_str, array_repr, e, pi, put, \
      resize, around, concatenate, vdot, transpose, \
      diagonal, searchsorted, argsort, convolve, dot, \
@@ -34,4 +34,6 @@ from numpy import sort, clip, rank, sign, shape, putmask, allclose, size,\
      correlate as cross_correlate, \
      place as insert
 
+def rank(data):
+    return data.ndim
 from .array_printer import array2string
